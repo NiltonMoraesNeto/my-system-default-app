@@ -34,9 +34,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const login = async (email: string, password: string) => {
     try {
-      const response = await axios.get<{ length: number }>("suaURL/users", {
-        params: { email, password },
-      });
+      const response = await axios.get<{ length: number }>(
+        "http://192.168.0.51:3001/users",
+        {
+          params: { email, password },
+        }
+      );
 
       if (response.data.length > 0) {
         const token = "fake-jwt-token";
