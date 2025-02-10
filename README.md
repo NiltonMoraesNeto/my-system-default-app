@@ -2,5 +2,6 @@ Projeto feito em [React Native](https://reactnative.dev/) com [Expo](https://exp
 ## Getting Started
 
 ```bash
+npm i
 npm start
 ```
